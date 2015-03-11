@@ -33,7 +33,8 @@ object Dependencies {
     "org.apache.spark" %% "spark-sql" % "1.2.0" % "provided" exclude(
                                             "io.netty", "netty-all") excludeAll(excludeQQ),
     // Force netty version.  This avoids some Spark netty dependency problem.
-    "io.netty" % "netty-all" % "4.0.23.Final"
+    "io.netty" % "netty-all" % "4.0.23.Final",
+    "mysql" % "mysql-connector-java" % "5.1.34"
   )
 
   lazy val slickDeps = Seq(
