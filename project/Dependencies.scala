@@ -30,6 +30,8 @@ object Dependencies {
   lazy val sparkDeps = Seq(
     "org.apache.spark" %% "spark-core" % "1.2.0" % "provided" exclude(
                                             "io.netty", "netty-all") excludeAll(excludeQQ),
+    "org.apache.spark" %% "spark-streaming" % "1.2.0" % "provided" exclude(
+                                            "io.netty", "netty-all") excludeAll(excludeQQ),
     "org.apache.spark" %% "spark-sql" % "1.2.0" % "provided" exclude(
                                             "io.netty", "netty-all") excludeAll(excludeQQ),
     // Force netty version.  This avoids some Spark netty dependency problem.
